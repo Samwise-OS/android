@@ -1,0 +1,16 @@
+name: Repository standards
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  baseline:
+    uses: Samwise-OS/admin/.github/workflows/repository-baseline.yml@6b857ed60ac09708c68535fc769756e3a92a7d21
+    permissions:
+      contents: read
